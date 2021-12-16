@@ -1,0 +1,41 @@
+#DO NOT COMMIT THE NON-TEMPLATE CONFIG TO FILE TO VERSION CONTROL!!!!
+wwwConfig = {
+	#set value to prod or local for production or local respectivly
+	'serverType' : '<SERVER_TYPE>',
+	#absolute path to staicroot folder on the machine - should be outside the
+	#git repo
+	'STATIC_ROOT' : '<STATIC_ROOT>',
+	'STATIC_URL' : '<STATIC_URL>',
+	# SECURITY WARNING: keep the secret key used in production secret!
+	'SECRET_KEY' : '<SECRET_KEY>',
+	'IS_DEBUG' : <IS_DEBUG>,
+	'ALLOWED_HOSTS' : '<ALLOWED_HOSTS>',
+	'LOG_LOCATION' : '<LOG_LOCATION>',
+	'BASE_URL' : '<BASE_URL>',
+	'SENTIMENT_ML_MODEL_API_URL' : '<SENTIMENT_ML_MODEL_API_URL>',
+	'CELERY_BROKER_URL' : '<CELERY_BROKER_URL>',
+	'LOGSTASH_HOST' : '<LOGSTASH_HOST>',
+	'LOGSTASH_PORT' : <LOGSTASH_PORT>,
+	'ELASTIC_SEARCH_API_URL' : '<ELASTIC_SEARCH_API_URL>',
+	'BANGLA_BLOG_BASE_URL' : '<BANGLA_BLOG_BASE_URL>',
+	'NEWS_CRAWLER_BASE_URL' : '<NEWS_CRAWLER_BASE_URL>',
+	'TECH_BLOG_CRAWLER_BASE_URL' : '<TECH_BLOG_CRAWLER_BASE_URL>',
+	'YOUTUBE_CRAWLER_BASE_URL': '<YOUTUBE_CRAWLER_BASE_URL>'
+
+}
+
+dbConfig = {
+	'DB_NAME' : '<DB_NAME>',
+	'DB_USER' : '<DB_USER>',
+	'DB_PASSWORD' : '<DB_PASSWORD>',
+	'DB_HOST' : '<DB_HOST>',
+	'DB_PORT' : '<DB_PORT>'
+}
+
+crawlerDBConfig = {
+	'dbName' : <DB_NAME>,
+	'dbUser' : '<DB_USER>',
+	'dbPassword' : '<DB_PASSWORD>',
+	'dbHost' :  '<DB_HOST>',
+	'dbPort' : '<DB_PORT>'
+}

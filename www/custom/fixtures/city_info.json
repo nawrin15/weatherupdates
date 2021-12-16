@@ -1,0 +1,75 @@
+[
+    {
+        "model": "weather_api.cityinfo", 
+        "pk": 1, 
+        "fields": {
+            "name": "Dhaka", 
+            "country": "BD", 
+            "lon": "90.4074400000", 
+            "lat": "23.7104000000"
+        }
+    }, {
+        "model": "weather_api.cityinfo", 
+        "pk": 2, 
+        "fields": {
+            "name": "Chittagong", 
+            "country": "BD", 
+            "lon": "91.8363880000", 
+            "lat": "22.3330590000"
+        }
+    }, {
+        "model": "weather_api.cityinfo", 
+        "pk": 3, 
+        "fields": {
+            "name": "Comilla", 
+            "country": "BD", 
+            "lon": "91.2044370000", 
+            "lat": "23.4577810000"
+        }
+    }, {
+        "model": "weather_api.cityinfo", 
+        "pk": 4, 
+        "fields": {
+            "name": "Khulna", 
+            "country": "BD", 
+            "lon": "89.5672300000", 
+            "lat": "22.8134800000"
+        }
+    }, {
+        "model": "weather_api.cityinfo", 
+        "pk": 5, 
+        "fields": {
+            "name": "Barisal", 
+            "country": "BD", 
+            "lon": "90.3333280000", 
+            "lat": "22.5000000000"
+        }
+    }, {
+        "model": "weather_api.cityinfo", 
+        "pk": 6, 
+        "fields": {
+            "name": "Mymensingh", 
+            "country": "BD", 
+            "lon": "90.4000020000", 
+            "lat": "24.7500000000"
+        }
+    }, {
+        "model": "weather_api.cityinfo", 
+        "pk": 7, 
+        "fields": {
+            "name": "Rangpur", 
+            "country": "BD", 
+            "lon": "89.2500000000", 
+            "lat": "25.7500000000"
+        }
+    }, {
+        "model": "weather_api.cityinfo", 
+        "pk": 8, 
+        "fields": {
+            "name": "Sylhet", 
+            "country": "BD", 
+            "lon": "91.8716740000", 
+            "lat": "24.8966690000"
+        }
+    }
+]
