@@ -1,0 +1,64 @@
+version: '3.3'
+
+services:
+    web:
+        build: .
+        restart: always
+        volumes:
+            - .:/opt/weatherupdates
+        ports:
+            - "8000:8000"
+        image: weatherupdates_web
+        entrypoint: /opt/weatherupdates/www/compile.sh
+        depends_on:
+            - weatherupdatesdb
+            - redis
+    weatherupdatesdb:
+        restart: always
+        image: postgres
+        environment:
+          - POSTGRES_DB=$WEATHER_UPDATES_DB_NAME
+          - POSTGRES_USER=$WEATHER_UPDATES_DB_USER
+          - POSTGRES_PASSWORD=$WEATHER_UPDATES_DB_PASSWORD
+          - POSTGRES_PORT=$WEATHER_UPDATES_DB_PORT
+        # ports:
+        #   - "5432:5432"
+        volumes:
+          - /private/var/lib/postgresql:/var/lib/postgresql
+        # expose:
+        #   - "5432"
+
+    redis:
+      image: "redis:alpine"
+      restart: always
+    celery:
+      build: .
+      restart: always
+      command: watchmedo auto-restart
+              --directory=../../
+              --pattern=*.py
+              --recursive
+              -- celery
+              --app=weatherupdates worker
+              --concurrency=100
+              --loglevel=info
+              --pool=gevent
+      volumes:
+        - .:/opt/weatherupdates
+      depends_on:
+        - redis
+    celery-beat:
+      build: .
+      restart: always
+      command: watchmedo auto-restart
+              --directory=../../
+              --pattern=*.py
+              --recursive
+              -- celery
+              --app=weatherupdates beat
+              --loglevel=INFO
+      volumes:
+        - .:/opt/weatherupdates
+      depends_on:
+        - redis
+

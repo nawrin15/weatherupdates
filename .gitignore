@@ -1,0 +1,11 @@
+~*
+*.pyc
+# localconfig.py
+*.sqlite*
+.env
+www/compile.sh
+/Dockerfile
+/docker-compose.yml
+/requirements.txt
+celerybeat-schedule.db
+db_data/
