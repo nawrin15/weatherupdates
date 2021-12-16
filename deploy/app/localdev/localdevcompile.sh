@@ -1,6 +1,7 @@
 #!/bin/bash
 echo "============================================================"
 echo "Running local dev compile file..."
+python3 manage.py wait_for_db
 python3 manage.py migrate
 echo "Loading data..."
 python3 manage.py loaddata user.json
